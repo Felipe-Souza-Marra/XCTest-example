@@ -32,6 +32,7 @@ struct ValidationNumber {
     
 }
 
+/// Erros para o resultado de um inteiro.
 enum NumberValidationError: LocalizedError {
     
     case notNumber
