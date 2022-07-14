@@ -5,28 +5,60 @@
 //  Created by Felipe Souza Marra on 12/07/22.
 //
 
+@testable import XCTest_example
 import XCTest
+import SwiftUI
 
 class XCTest_exampleTests: XCTestCase {
     
     /// Quando um teste começar será rodado essa função.
     override func setUpWithError() throws {
-        print("SetUp - Começando Teste")
+        print("----> SetUp - Começando Teste")
     }
     
     /// Quando um teste estiver finalizando será rodado essa função.
     override func tearDownWithError() throws {
-        print("TearDown - Finalizando Teste")
+        print("----> TearDown - Finalizando Teste")
     }
 
-    func testExample() throws {
-        // This is an example of a functional test case.
-        // Use XCTAssert and related functions to verify your tests produce the correct results.
-        // Any test you write for XCTest can be annotated as throws and async.
-        // Mark your test throws to produce an unexpected failure when your test encounters an uncaught error.
-        // Mark your test async to allow awaiting for asynchronous code to complete. Check the results with assertions afterwards.
+    func testNumberNotExisting() throws {
+        
+        let validation: ValidationNumber = ValidationNumber()
+        let expectedError = NumberValidationError.notNumber
+        var error: NumberValidationError?
+        
+        XCTAssertThrowsError(try validation.greaterThan(nil, in: 200)) { thrownError in
+            error = thrownError as? NumberValidationError
+        }
+        
+        XCTAssertEqual(expectedError, error)
+        
     }
-
+    
+    func testNumberGreaterThan() throws {
+        
+        let validation: ValidationNumber = ValidationNumber()
+        
+        XCTAssertTrue(try validation.greaterThan(110), NumberValidationError.notGreater.errorDescription!)
+        
+        XCTAssertThrowsError(try validation.greaterThan(200, in: 300), NumberValidationError.notGreater.errorDescription!)
+        
+        XCTAssertTrue(try validation.greaterThan(200, in: 190), NumberValidationError.notGreater.errorDescription!)
+        
+    }
+    
+    func testNumberLessThan() throws {
+        
+        let validation: ValidationNumber = ValidationNumber()
+        
+        XCTAssertTrue(try validation.lessThan(90), NumberValidationError.notGreater.errorDescription!)
+        
+        XCTAssertThrowsError(try validation.lessThan(200, in: 190), NumberValidationError.notGreater.errorDescription!)
+        
+        XCTAssertTrue(try validation.lessThan(200, in: 250), NumberValidationError.notGreater.errorDescription!)
+        
+    }
+    
     func testPerformanceExample() throws {
         // This is an example of a performance test case.
         measure {

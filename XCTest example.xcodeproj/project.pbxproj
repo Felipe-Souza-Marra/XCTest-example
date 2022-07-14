@@ -14,6 +14,8 @@
 		77E79094287DF92300BB29E3 /* XCTest_exampleTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77E79093287DF92300BB29E3 /* XCTest_exampleTests.swift */; };
 		77E790A1287DFC6D00BB29E3 /* XCTest_exampleUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77E790A0287DFC6D00BB29E3 /* XCTest_exampleUITests.swift */; };
 		77E790A3287DFC6D00BB29E3 /* XCTest_exampleUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77E790A2287DFC6D00BB29E3 /* XCTest_exampleUITestsLaunchTests.swift */; };
+		77E790AF287E21C900BB29E3 /* LogicWithNumbers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77E790AE287E21C900BB29E3 /* LogicWithNumbers.swift */; };
+		77E790B1287F444600BB29E3 /* AnotherView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77E790B0287F444600BB29E3 /* AnotherView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -44,6 +46,8 @@
 		77E7909E287DFC6D00BB29E3 /* XCTest exampleUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "XCTest exampleUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		77E790A0287DFC6D00BB29E3 /* XCTest_exampleUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XCTest_exampleUITests.swift; sourceTree = "<group>"; };
 		77E790A2287DFC6D00BB29E3 /* XCTest_exampleUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XCTest_exampleUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		77E790AE287E21C900BB29E3 /* LogicWithNumbers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogicWithNumbers.swift; sourceTree = "<group>"; };
+		77E790B0287F444600BB29E3 /* AnotherView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnotherView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -94,9 +98,11 @@
 		77E7907E287DEB5A00BB29E3 /* XCTest example */ = {
 			isa = PBXGroup;
 			children = (
-				77E7907F287DEB5A00BB29E3 /* XCTest_exampleApp.swift */,
-				77E79081287DEB5A00BB29E3 /* ContentView.swift */,
-				77E79083287DEB5E00BB29E3 /* Assets.xcassets */,
+				77E790AD287E167C00BB29E3 /* Resources */,
+				77E790AA287E163700BB29E3 /* Model */,
+				77E790AB287E164600BB29E3 /* View */,
+				77E790AC287E164E00BB29E3 /* Controller */,
+				77E790A9287E15E000BB29E3 /* Life cycle */,
 				77E79085287DEB5E00BB29E3 /* Preview Content */,
 			);
 			path = "XCTest example";
@@ -125,6 +131,46 @@
 				77E790A2287DFC6D00BB29E3 /* XCTest_exampleUITestsLaunchTests.swift */,
 			);
 			path = "XCTest exampleUITests";
+			sourceTree = "<group>";
+		};
+		77E790A9287E15E000BB29E3 /* Life cycle */ = {
+			isa = PBXGroup;
+			children = (
+				77E7907F287DEB5A00BB29E3 /* XCTest_exampleApp.swift */,
+			);
+			path = "Life cycle";
+			sourceTree = "<group>";
+		};
+		77E790AA287E163700BB29E3 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				77E790AE287E21C900BB29E3 /* LogicWithNumbers.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		77E790AB287E164600BB29E3 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				77E79081287DEB5A00BB29E3 /* ContentView.swift */,
+				77E790B0287F444600BB29E3 /* AnotherView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		77E790AC287E164E00BB29E3 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		77E790AD287E167C00BB29E3 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				77E79083287DEB5E00BB29E3 /* Assets.xcassets */,
+			);
+			path = Resources;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -257,6 +303,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				77E790B1287F444600BB29E3 /* AnotherView.swift in Sources */,
+				77E790AF287E21C900BB29E3 /* LogicWithNumbers.swift in Sources */,
 				77E79082287DEB5A00BB29E3 /* ContentView.swift in Sources */,
 				77E79080287DEB5A00BB29E3 /* XCTest_exampleApp.swift in Sources */,
 			);
