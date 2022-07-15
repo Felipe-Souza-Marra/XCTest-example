@@ -91,14 +91,14 @@ jobs:
           
           # validate
           xcrun altool --validate-app \
-             -f ProjetoTest-Ci.ipa\
+             -f "XCTest example".ipa\
              --type ios \
              --apiKey "$API_APP_STORE_ID_KEY"  \
              --apiIssuer "$API_APP_STORE_ISSUER_ID"
            
            # upload app
            xcrun altool --upload-app \
-             -f ProjetoTest-Ci.ipa\
+             -f "XCTest example".ipa\
              --type ios \
              --apiKey "$API_APP_STORE_ID_KEY"  \
              --apiIssuer "$API_APP_STORE_ISSUER_ID"
