@@ -1,4 +1,4 @@
-name: upload-on-app-store
+name: CD
 
 # Controls when the workflow will run
 on:
