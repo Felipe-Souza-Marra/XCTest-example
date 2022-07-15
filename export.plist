@@ -3,7 +3,7 @@
 <plist version="1.0">
 <dict>
 	<key>teamID</key>
-	<string>PN8K78V28P</string>
+	<string>BN93LQY594</string>
 	<key>uploadBitcode</key>
 	<true/>
 	<key>stripSwiftSymbols</key>
@@ -26,8 +26,8 @@
 	<string>manual</string>
 	<key>provisioningProfiles</key>
 	<dict>
-		<key>io.ucb.anderson.test</key>
-		<string>Test</string>
+		<key>io.ucb.felipe.XCTest-example</key>
+		<string>CD Teste</string>
 	</dict>
 </dict>
 </plist>
