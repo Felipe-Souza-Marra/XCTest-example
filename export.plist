@@ -27,7 +27,7 @@
 	<key>provisioningProfiles</key>
 	<dict>
 		<key>io.ucb.felipe.XCTest-example</key>
-		<string>CD Teste</string>
+		<string>Distribution CD</string>
 	</dict>
 </dict>
 </plist>
