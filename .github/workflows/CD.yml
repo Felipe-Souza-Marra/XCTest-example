@@ -3,24 +3,19 @@ name: CD
 # Controls when the workflow will run
 on:
   # Triggers the workflow on pull request review events but only for the "main" branch
-  pull_request_review:
-    types: [submitted]
-    branches: [ "develop" ]
+  workflow_run:
+    workflows: [CI]
+    types: [completed]
+    branches: [main]
 
 # A workflow run is made up of one or more jobs that can run sequentially or in parallel
 jobs:
-  # This workflow contains a single job called "build"
-  build:
-  
-    if: github.event.review.state == 'approved'
-    
-    # The type of runner that the job will run on
-    runs-on: ubuntu-latest
 
-    # Steps represent a sequence of tasks that will be executed as part of the job
+  Test-success:
+    runs-on: ubuntu-latest
+    if: ${{ github.event.workflow_run.conclusion == 'success' }}
     steps:
-      
-      - run: echo "This PR was approved"
+      - run: echo 'The triggering workflow passed'
       
       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
       - uses: actions/checkout@v3
@@ -32,3 +27,9 @@ jobs:
           issuer-id: ${{ secrets.APPSTORE_ISSUER_ID }}
           api-key-id: ${{ secrets.APPSTORE_API_KEY_ID }}
           api-private-key: ${{ secrets.APPSTORE_API_PRIVATE_KEY }}
+      
+  Test-failure:
+    runs-on: ubuntu-latest
+    if: ${{ github.event.workflow_run.conclusion == 'failure' }}
+    steps:
+      - run: echo 'The triggering workflow failed'
