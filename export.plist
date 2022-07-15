@@ -1,1 +1,33 @@
-
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>teamID</key>
+	<string>PN8K78V28P</string>
+	<key>uploadBitcode</key>
+	<true/>
+	<key>stripSwiftSymbols</key>
+	<true/>
+	<key>desbaste</key>
+	<string>&lt;none&gt;</string>
+	<key>manageAppVersionAndBuildNumber</key>
+	<true/>
+	<key>generateAppStoreInformation</key>
+	<true/>
+	<key>compileBitcode</key>
+	<true/>
+	<key>destination</key>
+	<string>export</string>
+	<key>method</key>
+	<string>app-store</string>
+	<key>uploadSymbols</key>
+	<true/>
+	<key>signingStyle</key>
+	<string>manual</string>
+	<key>provisioningProfiles</key>
+	<dict>
+		<key>io.ucb.anderson.test</key>
+		<string>Test</string>
+	</dict>
+</dict>
+</plist>
