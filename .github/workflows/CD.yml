@@ -1,11 +1,11 @@
-name: upload-on-app-store
+name: CD
 
 # Controls when the workflow will run
 on:
   # Triggers the workflow on pull request review events but only for the "main" branch
   pull_request_review:
     types: [submitted]
-    branches: [ "main" ]
+    branches: [ "develop" ]
 
 # A workflow run is made up of one or more jobs that can run sequentially or in parallel
 jobs:
