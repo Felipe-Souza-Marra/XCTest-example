@@ -46,7 +46,7 @@ jobs:
              -archivePath XCTest example.xcarchive \
              archive
            
-           xcodebuild -exportArchive -archivePath XCTest example.xcarchive \
+           xcodebuild -exportArchive -archivePath XCTest example".xcarchive \
            -exportPath Release/ \
            -exportOptionsPlist export.plist
       - name: Check files
