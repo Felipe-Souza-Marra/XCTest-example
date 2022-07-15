@@ -41,12 +41,12 @@ jobs:
           cp $PP_PATH ~/Library/MobileDevice/Provisioning\ Profiles
       - name: Build app
         run: |
-           xcodebuild -project ProjetoTest-Ci.xcodeproj \
+           xcodebuild -project XCTest example.xcodeproj \
              -scheme XCTest example \
-             -archivePath ProjetoTest-Ci.xcarchive \
+             -archivePath XCTest example.xcarchive \
              archive
            
-           xcodebuild -exportArchive -archivePath ProjetoTest-Ci.xcarchive \
+           xcodebuild -exportArchive -archivePath XCTest example.xcarchive \
            -exportPath Release/ \
            -exportOptionsPlist export.plist
       - name: Check files
