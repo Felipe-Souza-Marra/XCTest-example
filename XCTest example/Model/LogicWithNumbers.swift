@@ -30,6 +30,15 @@ struct ValidationNumber {
         
     }
     
+    func waitNumber(number: Int, seconds: Double) async throws -> Int? {
+        
+        
+        try await Task.sleep(seconds: seconds)
+        
+        return number
+        
+    }
+    
 }
 
 /// Erros para o resultado de um inteiro.
